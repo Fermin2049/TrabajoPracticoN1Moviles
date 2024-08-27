@@ -32,11 +32,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        viewModelMain.getNavigateToActivity().observe(this,intent -> {
-            if (intent == null){
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);          }
-        });
 
 
     }

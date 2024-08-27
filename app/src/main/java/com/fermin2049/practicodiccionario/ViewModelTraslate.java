@@ -42,7 +42,7 @@ public class ViewModelTraslate extends AndroidViewModel {
                     return;
                 }
             }
-            wordMutableLiveData.setValue(new Word("Palabra no encontrada","",R.drawable.error));
+            wordMutableLiveData.setValue(new Word("","Palabra no encontrada",R.drawable.error));
         }
     }
 

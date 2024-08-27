@@ -18,13 +18,7 @@ public class ViewModelMain extends AndroidViewModel {
         super(application);
     }
 
-    public LiveData<Intent> getNavigateToActivity() {
-        return navigateToActivity;
-    }
 
-    public LiveData<String> getMutableWord(){
-        return mutableWord == null ?mutableWord = new MutableLiveData<>() : mutableWord;
-    }
 
     public void verificationWord(String word){
         if (word.isEmpty()){

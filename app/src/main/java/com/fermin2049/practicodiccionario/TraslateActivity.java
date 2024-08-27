@@ -23,14 +23,16 @@ public class TraslateActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         modelTraslate = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(ViewModelTraslate.class);
 
-        // Obtener el Intent y rescatar los datos
-        Intent intent = getIntent();
-        modelTraslate.rescueData(intent);
+
 
         // Observar el LiveData<Word>
         modelTraslate.getWordLiveData().observe(this, word -> {
             binding.textViewEnglish.setText(word.getEnglish());
             binding.imageEnglish.setImageResource(word.getImage());
         });
+
+        // Obtener el Intent y rescatar los datos
+        Intent intent = getIntent();
+        modelTraslate.rescueData(intent);
     }
 }
